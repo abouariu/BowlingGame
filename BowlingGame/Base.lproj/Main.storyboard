@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BowlingGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r6L-R1-DUW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="762"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="YqG-qk-cJr">
+                                    <size key="itemSize" width="55" height="55"/>
+                                    <size key="headerReferenceSize" width="50" height="30"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="rollCell" id="TFB-W5-adM" customClass="RollCell" customModule="BowlingGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="30" width="55" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2B-pt-NY5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="37"/>
+                                                    <color key="backgroundColor" red="0.023529411760000001" green="0.35294117650000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw2-JV-3QP">
+                                                    <rect key="frame" x="0.0" y="37" width="55" height="18"/>
+                                                    <color key="backgroundColor" red="0.023529411760000001" green="0.35294117650000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="f2B-pt-NY5" secondAttribute="trailing" id="3BS-Q6-d9M"/>
+                                            <constraint firstItem="aw2-JV-3QP" firstAttribute="top" secondItem="f2B-pt-NY5" secondAttribute="bottom" id="57g-ii-v0O"/>
+                                            <constraint firstAttribute="bottom" secondItem="aw2-JV-3QP" secondAttribute="bottom" id="84k-bQ-Red"/>
+                                            <constraint firstItem="aw2-JV-3QP" firstAttribute="leading" secondItem="TFB-W5-adM" secondAttribute="leading" id="HMx-LA-z7A"/>
+                                            <constraint firstAttribute="trailing" secondItem="aw2-JV-3QP" secondAttribute="trailing" id="QEC-o2-Mb0"/>
+                                            <constraint firstItem="f2B-pt-NY5" firstAttribute="top" secondItem="TFB-W5-adM" secondAttribute="top" id="bJ6-Iy-3sQ"/>
+                                            <constraint firstItem="f2B-pt-NY5" firstAttribute="leading" secondItem="TFB-W5-adM" secondAttribute="leading" id="zQ2-Is-lLz"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="bottomLabel" destination="aw2-JV-3QP" id="nqM-85-zgN"/>
+                                            <outlet property="topLabel" destination="f2B-pt-NY5" id="ICT-3A-4ns"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SectionHeader" id="qLx-al-jVi" customClass="SectionHeader" customModule="BowlingGame" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGE-dk-uu2">
+                                            <rect key="frame" x="8" y="0.0" width="406" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.023529411760000001" green="0.35294117650000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="jGE-dk-uu2" firstAttribute="top" secondItem="qLx-al-jVi" secondAttribute="top" id="6jU-yQ-csJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="jGE-dk-uu2" secondAttribute="bottom" id="Tvk-N3-dIm"/>
+                                        <constraint firstAttribute="trailing" secondItem="jGE-dk-uu2" secondAttribute="trailing" id="pl6-WB-iJC"/>
+                                        <constraint firstItem="jGE-dk-uu2" firstAttribute="leading" secondItem="qLx-al-jVi" secondAttribute="leading" constant="8" id="zOJ-d8-e9W"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="sectionHeaderlabel" destination="jGE-dk-uu2" id="Nci-OZ-BVt"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rSd-3p-YoO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="M1P-8R-hg7"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEc-gJ-GFq">
+                                <rect key="frame" x="0.0" y="806" width="206.5" height="56"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.35294117650000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="MPi-Gv-ZzK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Roll">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollScoreButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRb-yT-iUo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWw-Qi-4pZ">
+                                <rect key="frame" x="207.5" y="806" width="206.5" height="56"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.35294117650000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Bg2-u6-R2y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Start Over">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9N-d9-nu1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sWw-Qi-4pZ" secondAttribute="trailing" id="5Rl-hr-gel"/>
+                            <constraint firstItem="r6L-R1-DUW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GZj-LU-YOd"/>
+                            <constraint firstItem="sWw-Qi-4pZ" firstAttribute="leading" secondItem="vEc-gJ-GFq" secondAttribute="trailing" constant="1" id="KGv-wV-3nI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vEc-gJ-GFq" secondAttribute="bottom" id="Njs-a0-fGu"/>
+                            <constraint firstItem="vEc-gJ-GFq" firstAttribute="top" secondItem="r6L-R1-DUW" secondAttribute="bottom" id="Qf5-4Z-6tE"/>
+                            <constraint firstItem="vEc-gJ-GFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RfE-f6-Nwv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r6L-R1-DUW" secondAttribute="trailing" id="V5t-fQ-do2"/>
+                            <constraint firstItem="r6L-R1-DUW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b7T-tW-75G"/>
+                            <constraint firstItem="sWw-Qi-4pZ" firstAttribute="width" secondItem="vEc-gJ-GFq" secondAttribute="width" id="mOD-Gt-nrb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sWw-Qi-4pZ" secondAttribute="bottom" id="x4e-GA-EI9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="r6L-R1-DUW" id="fvS-r6-OQp"/>
+                        <outlet property="rollScoreButton" destination="vEc-gJ-GFq" id="2So-HB-jBO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
